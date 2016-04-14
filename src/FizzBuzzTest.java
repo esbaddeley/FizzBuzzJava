@@ -11,12 +11,13 @@ public class FizzBuzzTest {
     private String fizz;
     private String buzz;
     private String fizzbuzz;
+    private Integer number;
 
     public FizzBuzzTest() {
         fizz = "Fizz";
         buzz = "Buzz";
         fizzbuzz = "FizzBuzz";
-
+        number = 7;
     }
 
     @Test
@@ -32,6 +33,11 @@ public class FizzBuzzTest {
     @Test
     public void resultShouldEqualFizzBuzzIfMultipleOfThreeAndFive (){
         assertEquals(fizzbuzz, FizzBuzz.getResults(15));
+    }
+
+    @Test
+    public void resultShouldEqualNumberPassedIfNotMultiple(){
+        assertEquals(number.toString(), FizzBuzz.getResults(number));
     }
 
 
