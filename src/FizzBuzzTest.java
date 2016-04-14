@@ -12,12 +12,14 @@ public class FizzBuzzTest {
     private String buzz;
     private String fizzbuzz;
     private Integer number;
+    private Integer zero;
 
     public FizzBuzzTest() {
         fizz = "Fizz";
         buzz = "Buzz";
         fizzbuzz = "FizzBuzz";
         number = 7;
+        zero = 0;
     }
 
     @Test
@@ -40,5 +42,9 @@ public class FizzBuzzTest {
         assertEquals(number.toString(), FizzBuzz.getResults(number));
     }
 
+    @Test
+    public void resultShouldReturnZeroIfGivenZero(){
+        assertEquals(zero.toString(), FizzBuzz.getResults(zero));
+    }
 
 }
